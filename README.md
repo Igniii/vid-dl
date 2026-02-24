@@ -41,12 +41,17 @@
 ## Instalación
 
 ```bash
-# Clona el repositorio
-git clone https://github.com/Igniii/vid-dl.git
-cd vid-dl
+Dos formas:
 
-# Ejecútalo directamente — sin instalación adicional
-python vid-dl.py
+  La primera clonando el repositorio mediante git y ejecutando el .py
+  # Clona el repositorio
+  git clone https://github.com/Igniii/vid-dl.git
+  cd vid-dl
+
+  # Ejecútalo directamente — sin instalación adicional
+  python vid-dl.py
+
+  La segunda forma es descargando el .zip del proyecto y ejecutando desde el explorador el .py
 ```
 
 > `yt-dlp` se instalará automáticamente en el primer uso si no está disponible.
