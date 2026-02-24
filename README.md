@@ -24,9 +24,9 @@
 
 ## Captura de pantalla
 
-```
+
 ![Captura de pantalla](assets/Screenshot_28.png)
-```
+
 
 ---
 
