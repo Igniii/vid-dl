@@ -1,28 +1,29 @@
 # [ VID-DL ]
 
-> A sleek, yt-dlp powered video downloader with a dark GUI — no command line required.
+> VID-DL es un programa en desarrollo de código abierto impulsado por yt-dlp, con GUI y hecho en Python, para descargar vídeos de internet mediante las políticas de YT-DLP.
+> 
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-00d4aa?style=flat-square&logo=python&logoColor=white)
-![yt-dlp](https://img.shields.io/badge/powered%20by-yt--dlp-7b61ff?style=flat-square)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-6b6b85?style=flat-square)
-![License](https://img.shields.io/badge/license-MIT-00d4aa?style=flat-square)
+![yt-dlp](https://img.shields.io/badge/funciona%20con-yt--dlp-7b61ff?style=flat-square)
+![Plataforma](https://img.shields.io/badge/plataforma-Windows-6b6b85?style=flat-square)
+![Licencia](https://img.shields.io/badge/licencia-MIT-00d4aa?style=flat-square)
 
 ---
 
-## Features
+## Características
 
-- **Fetch available qualities** — lists all resolutions for any video URL before downloading
-- **Quality selector** — choose from `Best available (auto)` down to the lowest resolution
-- **Automatic dependency handling** — installs `yt-dlp` and `imageio-ffmpeg` on the fly if not found
-- **FFmpeg auto-detection** — merges video + audio streams automatically
-- **Subtitle download** — fetches `ca` and `es` subtitles when available
-- **Output folder picker** — defaults to your Desktop, fully customizable
-- **Live log panel** — real-time download progress streamed directly in the UI
-- **Cross-platform** — works on Windows, macOS, and Linux
+- **Obtención de calidades disponibles** — lista todas las resoluciones de cualquier URL antes de descargar
+- **Selector de calidad** — elige desde `Mejor disponible (auto)` hasta la resolución más baja
+- **Instalación automática de dependencias** — instala `yt-dlp` e `imageio-ffmpeg` al vuelo si no están presentes
+- **Detección automática de FFmpeg** — fusiona streams de vídeo y audio automáticamente
+- **Descarga de subtítulos** — obtiene subtítulos en `ca` y `es` cuando están disponibles
+- **Selector de carpeta de destino** — se guarda en el Escritorio por defecto, totalmente configurable
+- **Panel de log en tiempo real** — el progreso de descarga se muestra directamente en la interfaz
+- **Multiplataforma** — funciona en Windows, macOS y Linux
 
 ---
 
-## Screenshot
+## Captura de pantalla
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -48,72 +49,72 @@
 
 ---
 
-## Requirements
+## Requisitos
 
 - Python **3.10+**
-- `tkinter` (included with standard Python on Windows/macOS; on Linux: `sudo apt install python3-tk`)
-- `yt-dlp` — installed automatically if missing
-- `ffmpeg` — used for merging streams; falls back to `imageio-ffmpeg` if not in PATH
+- `tkinter` (incluido con Python estándar en Windows/macOS; en Linux: `sudo apt install python3-tk`)
+- `yt-dlp` — se instala automáticamente si no está disponible
+- `ffmpeg` — se usa para fusionar streams; utiliza `imageio-ffmpeg` como alternativa si no está en el PATH
 
 ---
 
-## Installation
+## Instalación
 
 ```bash
-# Clone the repo
+# Clona el repositorio
 git clone https://github.com/Igniii/vid-dl.git
 cd vid-dl
 
-# Run directly — no pip install needed
+# Ejecútalo directamente — sin instalación adicional
 python main.py
 ```
 
-> `yt-dlp` will be installed automatically on first run if it's not already available.
+> `yt-dlp` se instalará automáticamente en el primer uso si no está disponible.
 
 ---
 
-## Usage
+## Uso
 
-1. **Paste a video URL** into the URL field (YouTube, Twitter/X, Instagram, and [many more](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md))
-2. Click **FETCH QUALITIES** to retrieve available resolutions
-3. Select your desired quality from the dropdown
-4. Choose an **output folder** (defaults to your Desktop)
-5. Click **⬇ DOWNLOAD** and watch the log
+1. **Pega la URL del vídeo** en el campo de URL (YouTube, Twitter/X, Instagram y [muchos más](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md))
+2. Haz clic en **FETCH QUALITIES** para obtener las resoluciones disponibles
+3. Selecciona la calidad deseada en el desplegable
+4. Elige la **carpeta de destino** (por defecto tu Escritorio)
+5. Haz clic en **⬇ DOWNLOAD** y sigue el progreso en el log
 
 ---
 
-## How it Works
+## Cómo funciona
 
-| Step | What happens |
+| Paso | Qué ocurre |
 |---|---|
-| Fetch | Runs `yt-dlp --dump-json` to retrieve all available formats |
-| Quality | Builds a `yt-dlp` format selector like `bestvideo[height=1080]+bestaudio` |
-| Download | Spawns a `yt-dlp` subprocess and streams stdout to the log panel |
-| Merge | Uses `ffmpeg` (or `imageio-ffmpeg`) to merge video and audio into `.mp4` |
+| Obtener calidades | Ejecuta `yt-dlp --dump-json` para recuperar todos los formatos disponibles |
+| Calidad | Construye un selector de formato como `bestvideo[height=1080]+bestaudio` |
+| Descarga | Lanza un subproceso `yt-dlp` y muestra el stdout en el panel de log |
+| Fusión | Usa `ffmpeg` (o `imageio-ffmpeg`) para combinar vídeo y audio en `.mp4` |
 
 ---
 
-## Project Structure
+## Estructura del proyecto
 
 ```
 vid-dl/
-└── main.py       # Everything — GUI + download logic in a single file
+└── main.py       # Todo en uno — interfaz gráfica + lógica de descarga en un único archivo
 ```
 
 ---
 
-## Contributing
+## Contribuir
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
+Los pull requests son bienvenidos. Para cambios importantes, abre primero un issue para comentar qué te gustaría modificar.
 
 ---
 
-## License
+## Licencia
 
 [MIT](LICENSE)
 
 ---
 
 <p align="center">
-  Built with <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> + Python tkinter
+  Desarrollado con <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> + Python tkinter
 </p>
