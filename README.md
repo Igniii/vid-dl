@@ -14,8 +14,7 @@
 
 - **Obtención de calidades disponibles** — lista todas las resoluciones de cualquier URL antes de descargar
 - **Selector de calidad** — elige desde `Mejor disponible (auto)` hasta la resolución más baja
-- **Instalación automática de dependencias** — instala `yt-dlp` e `imageio-ffmpeg` al vuelo si no están presentes
-- **Detección automática de FFmpeg** — fusiona streams de vídeo y audio automáticamente
+- **Instalación automática de dependencias** — instala `yt-dlp` e `imageio-ffmpeg` on the fly si no se tienen ya
 - **Descarga de subtítulos** — obtiene subtítulos en `ca` y `es` cuando están disponibles
 - **Selector de carpeta de destino** — se guarda en el Escritorio por defecto, totalmente configurable
 - **Panel de log en tiempo real** — el progreso de descarga se muestra directamente en la interfaz
@@ -47,7 +46,7 @@ git clone https://github.com/Igniii/vid-dl.git
 cd vid-dl
 
 # Ejecútalo directamente — sin instalación adicional
-python main.py
+python vid-dl.py
 ```
 
 > `yt-dlp` se instalará automáticamente en el primer uso si no está disponible.
@@ -61,26 +60,6 @@ python main.py
 3. Selecciona la calidad deseada en el desplegable
 4. Elige la **carpeta de destino** (por defecto tu Escritorio)
 5. Haz clic en **⬇ DOWNLOAD** y sigue el progreso en el log
-
----
-
-## Cómo funciona
-
-| Paso | Qué ocurre |
-|---|---|
-| Obtener calidades | Ejecuta `yt-dlp --dump-json` para recuperar todos los formatos disponibles |
-| Calidad | Construye un selector de formato como `bestvideo[height=1080]+bestaudio` |
-| Descarga | Lanza un subproceso `yt-dlp` y muestra el stdout en el panel de log |
-| Fusión | Usa `ffmpeg` (o `imageio-ffmpeg`) para combinar vídeo y audio en `.mp4` |
-
----
-
-## Estructura del proyecto
-
-```
-vid-dl/
-└── main.py       # Todo en uno — interfaz gráfica + lógica de descarga en un único archivo
-```
 
 ---
 
