@@ -25,7 +25,7 @@
 ## Captura de pantalla
 
 ```
-<img width="700" height="634" alt="image" src="https://github.com/user-attachments/assets/dc0e6fff-056f-489e-8be4-cde312cd20d1" />
+![Captura de pantalla](assets/Screenshot_28.png)
 ```
 
 ---
