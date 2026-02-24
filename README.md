@@ -4,7 +4,7 @@
 > 
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-00d4aa?style=flat-square&logo=python&logoColor=white)
-![yt-dlp](https://img.shields.io/badge/funciona%20con-yt--dlp-7b61ff?style=flat-square)
+![yt-dlp](https://img.shields.io/badge/hecho%20mediante-yt--dlp-7b61ff?style=flat-square)
 ![Plataforma](https://img.shields.io/badge/plataforma-Windows-6b6b85?style=flat-square)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-00d4aa?style=flat-square)
 
@@ -19,32 +19,13 @@
 - **Descarga de subtítulos** — obtiene subtítulos en `ca` y `es` cuando están disponibles
 - **Selector de carpeta de destino** — se guarda en el Escritorio por defecto, totalmente configurable
 - **Panel de log en tiempo real** — el progreso de descarga se muestra directamente en la interfaz
-- **Multiplataforma** — funciona en Windows, macOS y Linux
 
 ---
 
 ## Captura de pantalla
 
 ```
-┌─────────────────────────────────────────────┐
-│  [ VID-DL ]   yt-dlp powered downloader     │
-│                                             │
-│  VIDEO URL                                  │
-│  [ https://...                 ] [FETCH]    │
-│                                             │
-│  QUALITY                                    │
-│  [ Best available (auto)      ▾]            │
-│                                             │
-│  OUTPUT FOLDER                              │
-│  [ C:\Users\...\Desktop       ] [BROWSE]    │
-│                                             │
-│  ─────────────────────────────────────────  │
-│         [ ⬇  DOWNLOAD ]                    │
-│                                             │
-│  LOG                                        │
-│  ▶ Downloading  [1080p]                     │
-│  [download]  42.3% of 128.50MiB            │
-└─────────────────────────────────────────────┘
+<img width="700" height="634" alt="image" src="https://github.com/user-attachments/assets/dc0e6fff-056f-489e-8be4-cde312cd20d1" />
 ```
 
 ---
